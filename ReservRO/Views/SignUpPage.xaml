@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:KeyboardControl.ViewModels"
+             x:Class="ReservRO.Views.SignUpPage"
+             BackgroundColor="PeachPuff">
+    <ContentView>
+        <ScrollView>
+            <views:KeyboardView Padding="25, 25, 25, 0">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+
+                    <Image Source="logo.png" WidthRequest="180" HeightRequest="180"/>
+
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="1">
+
+                    <Entry Placeholder="Email" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="EmailNew" />
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="2">
+
+                    <Entry Placeholder="Prenume" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Prenume" />
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="3">
+
+                    <Entry Placeholder="Nume" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Nume" />
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="4">
+
+                    <Entry Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="PasswordNew"/>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="5">
+
+                    <Entry Placeholder="Confirm Password" IsPassword="True" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="PasswordConfirmation"/>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="6">
+
+                    <Entry Placeholder="Telefon" Keyboard="Telephone" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Phone"/>
+
+                </StackLayout>
+
+                <Picker Grid.Row="7"
+                    x:Name="TipUtilizare"
+                        
+                    Title="Selecteaza tipul de utilizator"
+                    TitleColor="Black">
+
+                    <Picker.ItemsSource>
+
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Client</x:String>
+                            <x:String>Afacere</x:String>
+                        </x:Array>
+
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <StackLayout Grid.Row="8">
+
+                    <Button
+    
+                            Text="Sign Up" 
+                            Font="Bold, italic" 
+                            TextColor="Black"
+                            BackgroundColor="Transparent"
+                            BorderColor="Black"
+                            BorderWidth="1.5"
+                            CornerRadius="50"
+                            Clicked="Sign_Up" />
+
+                </StackLayout>
+            </views:KeyboardView>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

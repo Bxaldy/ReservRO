@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:KeyboardControl.ViewModels"
+             x:Class="ReservRO.Views.LoginPage"
+             BackgroundColor="PeachPuff">
+    
+    
+    <ContentView>
+
+        <StackLayout Padding="25, 60, 25, 0" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+
+            </Grid>
+
+            <StackLayout Grid.Row="0">
+
+                <Image Source="logo.png" WidthRequest="180" HeightRequest="200"/>
+                <!--pune-l intr-un label si pune-l cu un tap gesture sa duca intr-o pagina de credits, why not-->
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+
+                <Entry Placeholder="Email" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="UserName" />
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+
+                <Entry Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Password"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="3">
+
+                <Button
+                            VerticalOptions="EndAndExpand"
+                            Text="Login" 
+                            Font="Bold, italic" 
+                            TextColor="Black"
+                            BackgroundColor="Transparent"
+                            BorderColor="Black"
+                            BorderWidth="1.5"
+                            CornerRadius="50"
+                            Clicked="Login_Init"
+                    
+                            
+                />
+
+            </StackLayout>
+
+            <Label HorizontalOptions="Center" Grid.Row="4">
+
+                <Label.FormattedText>
+
+                    <FormattedString>
+
+                        <Span Text="Don't " TextColor="DarkRed" />
+                        <Span Text="have " TextColor="DarkBlue" />
+                        <Span Text="an " TextColor="DarkRed"/>
+                        <Span Text="account? " TextColor="DarkBlue" />
+                        <Span Text="REGISTER NOW" TextColor="DarkRed" FontAttributes="Bold" TextDecorations="Underline"/>
+
+                    </FormattedString>
+
+                </Label.FormattedText>
+
+                <Label.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tap_Register"/>
+
+                </Label.GestureRecognizers>
+
+            </Label>
+        </StackLayout>
+    </ContentView>
+</ContentPage>
