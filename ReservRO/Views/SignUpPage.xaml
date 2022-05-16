@@ -37,13 +37,13 @@
 
                 <StackLayout Grid.Row="2">
 
-                    <Entry Placeholder="Prenume" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Prenume" />
+                    <Entry Placeholder="Last Name" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Prenume" />
 
                 </StackLayout>
 
                 <StackLayout Grid.Row="3">
 
-                    <Entry Placeholder="Nume" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Nume" />
+                    <Entry Placeholder="First Name" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Nume" />
 
                 </StackLayout>
 
@@ -61,21 +61,21 @@
 
                 <StackLayout Grid.Row="6">
 
-                    <Entry Placeholder="Telefon" Keyboard="Telephone" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Phone"/>
+                    <Entry Placeholder="Phone" Keyboard="Telephone" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Phone"/>
 
                 </StackLayout>
 
                 <Picker Grid.Row="7"
                     x:Name="TipUtilizare"
                         
-                    Title="Selecteaza tipul de utilizator"
+                    Title="Type of use"
                     TitleColor="Black">
 
                     <Picker.ItemsSource>
 
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Client</x:String>
-                            <x:String>Afacere</x:String>
+                            <x:String>Business</x:String>
                         </x:Array>
 
                     </Picker.ItemsSource>
