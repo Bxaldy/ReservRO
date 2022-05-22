@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.SfCalendar.XForms.iOS;
 using UIKit;
 
 namespace ReservRO.iOS
@@ -23,6 +24,9 @@ namespace ReservRO.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfCalendarRenderer.Init();
+            Syncfusion.XForms.iOS.RichTextEditor.SfRichTextEditorRenderer.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

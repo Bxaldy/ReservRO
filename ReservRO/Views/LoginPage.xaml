@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:KeyboardControl.ViewModels"
+             xmlns:viewmodel="clr-namespace:ReservRO.ViewModels"
              x:Class="ReservRO.Views.LoginPage"
-             BackgroundColor="PeachPuff">
+             BackgroundColor="PeachPuff"
+             x:DataType="viewmodel:LogInViewModel">
     
     
     <ContentView>
@@ -30,13 +32,15 @@
 
             <StackLayout Grid.Row="1">
 
-                <Entry Placeholder="Email" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="UserName" />
+                <Entry Placeholder="Email" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="UserName" 
+                       Text="{Binding Email}"/>
 
             </StackLayout>
 
             <StackLayout Grid.Row="2">
 
-                <Entry Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Password"/>
+                <Entry Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" x:Name="Password"
+                       Text="{Binding Password}"/>
 
             </StackLayout>
 
@@ -51,7 +55,7 @@
                             BorderColor="Black"
                             BorderWidth="1.5"
                             CornerRadius="50"
-                            Clicked="Login_Init"
+                            Command="{Binding LogInCommand}"
                     
                             
                 />
@@ -76,7 +80,7 @@
 
                 <Label.GestureRecognizers>
 
-                    <TapGestureRecognizer Tapped="Tap_Register"/>
+                    <TapGestureRecognizer Command="{Binding SignUpPageCommand}"/>
 
                 </Label.GestureRecognizers>
 

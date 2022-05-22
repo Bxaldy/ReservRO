@@ -11,22 +11,19 @@ using Xamarin.Forms.Xaml;
 namespace ReservRO.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class BusinessDashBoardPage : ContentPage
     {
-        public LoginPage()
+        BusinessDashBoardViewModel vm;
+        public BusinessDashBoardPage()
         {
             InitializeComponent();
-            this.BindingContext = new LogInViewModel(Navigation);
+            vm = new BusinessDashBoardViewModel();
+            this.BindingContext = vm;
         }
-
-        private void Login_Init(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-
-        }
-
-        async void Tap_Register(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SignUpPage());
+            base.OnAppearing();
+            vm.GetData();
         }
     }
 }

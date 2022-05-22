@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReservRO.Views.BusinessDashBoardPage"
+             BackgroundColor="Peru"
+             NavigationPage.HasBackButton="False"
+             Title="DashBoard">
+    <StackLayout>
+        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                     Spacing="40">
+            <Image Source="iconback.png" HorizontalOptions="StartAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding }"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="add.png" HorizontalOptions="EndAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding }"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>-->
+        <CollectionView ItemsSource="{Binding Appointments}"
+                        
+                       >
+            <CollectionView.ItemsLayout
+               >
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10"
+                           CornerRadius="20"
+                           BackgroundColor="PeachPuff"
+                           >
+                       
+                        <StackLayout>
+
+
+
+                            <Label HorizontalOptions="Center"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Business Name: "/>
+                                        <Span Text="{Binding BusinessName}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label 
+                               HorizontalOptions="Center"
+                               FontSize="24">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Client Name: "/>
+                                        <Span Text="{Binding ClientName}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label HorizontalOptions="Center"
+                                   FontSize="20">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Phone Number: "/>
+                                        <Span Text="{Binding PhoneNo}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label HorizontalOptions="Center"
+                                   FontSize="20">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Description: "/>
+                                        <Span Text="{Binding Description}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label HorizontalOptions="Center"
+                                   FontSize="20">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Date: "/>
+                                        <Span Text="{Binding Date}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label HorizontalOptions="Center"
+                                   FontSize="20">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Time: "/>
+                                        <Span Text="{Binding Time}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

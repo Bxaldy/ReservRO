@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReservRO.Views.ClientDashBoardPage"
+             xmlns:vm="clr-namespace:ReservRO.ViewModels"
+             BackgroundColor="Peru"
+             x:Name="this"
+             Title="DashBoard"
+             FlyoutItem.IsVisible="True"
+             NavigationPage.HasBackButton="False"
+             
+             >
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding Business}"
+                        
+                       >
+            <CollectionView.ItemsLayout
+               >
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10"
+                           CornerRadius="20"
+                           BackgroundColor="PeachPuff"
+                           >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=BindingContext.AppointmentPageCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                       
+                       
+                   
+                    <Label HorizontalOptions="Center"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Business Name : "/>
+                                <Span Text="{Binding FirstName}"/>
+                                <Span Text=" "/>
+                                <Span Text="{Binding LastName}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                        <Label Text="Availability"
+                               HorizontalOptions="Center"
+                               FontSize="24"/>
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="Center">
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="SU"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="MO"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="TU" HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="TU" HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="TU" HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="TU" HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="TU" HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                            </StackLayout>
+                            <!--<CollectionView HeightRequest="46"
+                                    SelectionMode="Single"
+                                    x:Name="dayCollection"
+                                    ItemsSource="{Binding Days}">
+
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"
+                                             />
+                                </CollectionView.ItemsLayout>
+
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                            <Label Text="{Binding DayShort}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                        </Frame>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+
+                            </CollectionView>-->
+                            <Label HorizontalOptions="Center"
+                                   FontSize="20">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="09:00 AM"/>
+                                        <Span Text="-"/>
+                                        <Span Text="06:00 PM"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

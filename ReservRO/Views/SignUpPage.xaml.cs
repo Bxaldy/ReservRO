@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReservRO.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace ReservRO.Views
         public SignUpPage()
         {
             InitializeComponent();
+            this.BindingContext = new SignUpViewModel(Navigation);
         }
         public async void Sign_Up(object sender, EventArgs e)
         {

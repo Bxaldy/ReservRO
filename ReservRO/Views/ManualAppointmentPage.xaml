@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ReservRO.ViewModels" 
+             xmlns:sf="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" xmlns:sfeditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+             x:Class="ReservRO.Views.ManualAppointmentPage"
+             x:DataType="vm:ManualAppointmentViewModel">
+    <ScrollView>
+        <StackLayout Padding="20">
+
+
+
+            <!--<StackLayout Orientation="Horizontal">
+                <Image Source="calendar.png"/>
+                <Image Source="clock.png"/>
+            <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   FontSize="24"
+                   FontAttributes="Bold">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding SelectedUser.FirstName}"/>
+                        <Span Text=" "/>
+                        <Span Text="{Binding SelectedUser.LastName}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+                <Image Source="profile.png" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>-->
+            <StackLayout HorizontalOptions="FillAndExpand"
+                     BackgroundColor="Blue">
+                <Label Text="Book Appointment" HorizontalOptions="Center" TextColor="White"
+                   FontSize="32" FontAttributes="Bold"/>
+            </StackLayout>
+            <Label Text="Select Date" HorizontalOptions="Center" FontSize="20"/>
+            <sf:SfCalendar
+            SelectionMode="SingleSelection"
+           HeightRequest="300"
+            SelectedDate="{Binding SelectedDate}"
+           />
+            <TimePicker Format="t"
+                        x:Name="picker"
+                    HorizontalOptions="Center"
+                    Time="{Binding  SelectedTime,Mode=TwoWay}"
+                   
+                      />
+            <Entry Placeholder="Full Name" Text="{Binding FullName}"
+                  HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="Phone Number" Text="{Binding Phone}"
+                   HorizontalOptions="FillAndExpand"/>
+            
+            <sfeditor:SfRichTextEditor PlaceHolder="Description" Text="{Binding Description}"/>
+            <Button Text="Book" TextColor="White" BackgroundColor="Blue" FontSize="20"
+                Command="{Binding BookCommand}"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
