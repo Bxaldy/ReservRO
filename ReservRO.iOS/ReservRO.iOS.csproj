@@ -138,12 +138,16 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ReservRO\ReservRO.csproj">
-      <Project>{32B914ED-4DAA-4975-BE31-DBA92E999627}</Project>
+      <Project>{F1289D4A-CD14-4704-BCF2-6CD4912F66EB}</Project>
       <Name>ReservRO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\logo.png">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\clock.png" />
