@@ -26,10 +26,12 @@ namespace ReservRO.ViewModels
         {
             Appointments.Clear();
             var db = await Utils.Init();
-            var appointments = await db.Table<AppointmentsModel>().ToListAsync();
-            foreach(var appointment in appointments)
+            string fullName = Utils.LogInUser.FirstName + " " + Utils.LogInUser.LastName;
+            var appointments = await db.Table<AppointmentsModel>().Where(a => a.BusinessName == fullName).ToListAsync();
+            foreach (var appointment in appointments)
             {
                 Appointments.Add(appointment);
+
             }
         }
     }

@@ -24,8 +24,12 @@ namespace ReservRO.Views
             var item = e.SelectedItem as FlyoutPage1FlyoutMenuItem;
             if (item == null)
                 return;
-            else
-                await Navigation.PopAsync();
+            if (item.Title == "My Appointments")
+            {
+                await Navigation.PushAsync(new MyAppointmentsPage());
+            }
+            else 
+            await Navigation.PopAsync();
 
             //var page = (Page)Activator.CreateInstance(item.TargetType);
             //page.Title = item.Title;

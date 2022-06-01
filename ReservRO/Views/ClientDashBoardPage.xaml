@@ -29,9 +29,6 @@
                                                   CommandParameter="{Binding .}"/>
                         </Frame.GestureRecognizers>
                         <StackLayout>
-                       
-                       
-                   
                     <Label HorizontalOptions="Center"
                            FontSize="24"
                            FontAttributes="Bold"
@@ -93,7 +90,7 @@
                                        Visual="Material"
                                        CornerRadius="25"
                                        BorderColor="Black">
-                                    <Label Text="TU" HorizontalOptions="Center"
+                                    <Label Text="WE" HorizontalOptions="Center"
                                            VerticalOptions="Center"/>
                                 </Frame>
                                 <Frame 
@@ -104,7 +101,7 @@
                                        Visual="Material"
                                        CornerRadius="25"
                                        BorderColor="Black">
-                                    <Label Text="TU" HorizontalOptions="Center"
+                                    <Label Text="TH" HorizontalOptions="Center"
                                            VerticalOptions="Center"/>
                                 </Frame>
                                 <Frame 
@@ -115,7 +112,7 @@
                                        Visual="Material"
                                        CornerRadius="25"
                                        BorderColor="Black">
-                                    <Label Text="TU" HorizontalOptions="Center"
+                                    <Label Text="FR" HorizontalOptions="Center"
                                            VerticalOptions="Center"/>
                                 </Frame>
                                 <Frame 
@@ -126,44 +123,28 @@
                                        Visual="Material"
                                        CornerRadius="25"
                                        BorderColor="Black">
-                                    <Label Text="TU" HorizontalOptions="Center"
+                                    <Label Text="SA" HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                                <Frame 
+                                    HeightRequest="42"
+                                       WidthRequest="42"
+                                       Padding="0"
+                                       HasShadow="True"
+                                       Visual="Material"
+                                       CornerRadius="25"
+                                       BorderColor="Black">
+                                    <Label Text="SU" HorizontalOptions="Center"
                                            VerticalOptions="Center"/>
                                 </Frame>
                             </StackLayout>
-                            <!--<CollectionView HeightRequest="46"
-                                    SelectionMode="Single"
-                                    x:Name="dayCollection"
-                                    ItemsSource="{Binding Days}">
-
-                                <CollectionView.ItemsLayout>
-                                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"
-                                             />
-                                </CollectionView.ItemsLayout>
-
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Frame HeightRequest="42"
-                                       WidthRequest="42"
-                                       Padding="0"
-                                       HasShadow="True"
-                                       Visual="Material"
-                                       CornerRadius="25"
-                                       BorderColor="Black">
-                                            <Label Text="{Binding DayShort}"
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center"/>
-                                        </Frame>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-
-                            </CollectionView>-->
                             <Label HorizontalOptions="Center"
                                    FontSize="20">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="09:00 AM"/>
+                                        <Span Text="09:00 AM "/>
                                         <Span Text="-"/>
-                                        <Span Text="06:00 PM"/>
+                                        <Span Text=" 06:00 PM"/>
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
